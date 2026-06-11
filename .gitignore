@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+out/
+release/
+build/
+
+# Electron packaging (electron-builder / electron-forge)
+*.dmg
+*.exe
+*.msi
+*.AppImage
+*.deb
+*.rpm
+*.snap
+*.asar
+dist_electron/
+
+# Vite
+.vite/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# pnpm
+.pnpm-store/
+
+# Test / coverage
+coverage/
+
+# Misc caches
+.cache/
+*.local
