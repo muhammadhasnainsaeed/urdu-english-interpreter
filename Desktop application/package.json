@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && env -u ELECTRON_RUN_AS_NODE ELECTRON_DEV=true electron .\"",
     "build": "vite build",
-    "start": "env -u ELECTRON_RUN_AS_NODE electron ."
+    "start": "env -u ELECTRON_RUN_AS_NODE electron .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check ./src",
+    "format": "biome format --write ./src",
+    "check": "pnpm lint && pnpm exec tsc --noEmit",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "muhammadhasnainsaeed",
@@ -19,12 +25,22 @@
     }
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.0",
     "@tailwindcss/vite": "^4.3.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "concurrently": "^10.0.3",
     "electron": "^42.3.3",
+    "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
     "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3",
     "vite": "^8.0.16",
+    "vitest": "^4.1.8",
     "wait-on": "^9.0.10"
   },
   "dependencies": {

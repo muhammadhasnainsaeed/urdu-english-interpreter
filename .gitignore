@@ -54,3 +54,4 @@ coverage/
 # Misc caches
 .cache/
 *.local
+.aider*
